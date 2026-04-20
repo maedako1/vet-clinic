@@ -1,8 +1,8 @@
 {
   "framework": "nextjs",
-  "installCommand": "npm ci",
-  "buildCommand": "npm run build",
-  "devCommand": "npm run dev",
-  "outputDirectory": ".next"
+  "installCommand": "cd web && npm ci",
+  "buildCommand": "cd web && npm run build",
+  "devCommand": "cd web && npm run dev",
+  "outputDirectory": "web/.next"
 }
 
