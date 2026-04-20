@@ -8,6 +8,20 @@ type FormState =
   | { status: "success"; message: string }
   | { status: "error"; message: string };
 
+function messageFromFailedResponse(data: unknown, res: Response): string {
+  if (typeof data === "object" && data && "error" in data) {
+    const text = String((data as { error?: unknown }).error ?? "").trim();
+    if (text.length > 0) return text;
+  }
+  if (res.status === 404) {
+    return "Online booking is not available here: this deployment has no server API (common with static export / opening the built files directly). Run the dev server locally with a Resend API key, or host on a platform that runs Next.js API routes.";
+  }
+  if (res.status === 500) {
+    return "Server email is not configured. Add RESEND_API_KEY to web/.env.local for local development.";
+  }
+  return `We could not send your request (HTTP ${res.status}). Please try again or call the clinic.`;
+}
+
 export function AppointmentForm() {
   const [state, setState] = React.useState<FormState>({ status: "idle" });
 
@@ -43,13 +57,9 @@ export function AppointmentForm() {
 
       const data: unknown = await res.json().catch(() => ({}));
       if (!res.ok) {
-        const msg =
-          typeof data === "object" && data && "error" in data
-            ? String((data as { error?: unknown }).error ?? "Error")
-            : "Error";
         setState({
           status: "error",
-          message: msg || "We couldn't send your request. Please try again.",
+          message: messageFromFailedResponse(data, res),
         });
         return;
       }
