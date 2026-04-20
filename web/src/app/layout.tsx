@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FamilyVet Clinic | București",
+  title: "FamilyVet Clinic | Bucharest",
   description:
     "Family vet clinic in Bucharest. Checkups, vaccines, lab tests and urgent care. Book an appointment online.",
 };

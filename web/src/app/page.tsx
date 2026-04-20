@@ -256,7 +256,7 @@ export default function Home() {
                 Contact & location
               </h2>
               <p className="mt-2 text-sm leading-6 text-black/65">
-                Strada Maria Rosetti 26A, București 020487. We recommend booking
+                26A Maria Rosetti Street, Bucharest 020487. We recommend booking
                 in advance.
               </p>
 
@@ -271,15 +271,15 @@ export default function Home() {
                   Address
                 </p>
                 <p className="mt-1 text-sm font-medium text-black/70">
-                  Strada Maria Rosetti 26A, București 020487
+                  26A Maria Rosetti Street, Bucharest 020487
                 </p>
               </div>
             </div>
 
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
               <iframe
-                title="Map - Strada Maria Rosetti 26A"
-                src="https://www.google.com/maps?q=Strada%20Maria%20Rosetti%2026A%2C%20Bucure%C8%99ti%20020487&output=embed"
+                title="Map - 26A Maria Rosetti Street"
+                src="https://www.google.com/maps?q=26A%20Maria%20Rosetti%20Street%2C%20Bucharest%20020487&output=embed"
                 className="h-[380px] w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -295,7 +295,7 @@ export default function Home() {
             FamilyVet Clinic
           </p>
           <p className="mt-1">
-            Strada Maria Rosetti 26A, București 020487 • 0720.123.123
+            26A Maria Rosetti Street, Bucharest 020487 • 0720.123.123
           </p>
           <p className="mt-4 text-xs text-black/50">
             © {new Date().getFullYear()} FamilyVet Clinic. All rights reserved.

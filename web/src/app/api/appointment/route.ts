@@ -53,14 +53,14 @@ export async function POST(req: Request) {
 
   const resend = new Resend(key);
 
-  const subject = `Programare nouă: ${payload.name}`;
+  const subject = `New appointment request: ${payload.name}`;
   const html = `
     <div style="font-family: ui-sans-serif, system-ui; line-height:1.5">
-      <h2 style="margin:0 0 12px">Solicitare programare</h2>
-      <p style="margin:0 0 6px"><b>Nume:</b> ${escapeHtml(payload.name)}</p>
-      <p style="margin:0 0 6px"><b>Telefon:</b> ${escapeHtml(payload.phone)}</p>
+      <h2 style="margin:0 0 12px">Appointment request</h2>
+      <p style="margin:0 0 6px"><b>Name:</b> ${escapeHtml(payload.name)}</p>
+      <p style="margin:0 0 6px"><b>Phone:</b> ${escapeHtml(payload.phone)}</p>
       <p style="margin:0 0 6px"><b>Email:</b> ${escapeHtml(payload.email)}</p>
-      <p style="margin:12px 0 6px"><b>Mesaj:</b></p>
+      <p style="margin:12px 0 6px"><b>Message:</b></p>
       <pre style="white-space:pre-wrap;margin:0;padding:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px">${escapeHtml(
         payload.message,
       )}</pre>

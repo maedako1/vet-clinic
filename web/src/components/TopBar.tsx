@@ -3,7 +3,7 @@ import { IconFacebook, IconInstagram, IconMapPin, IconPhone } from "./icons";
 
 const PHONE_DISPLAY = "0720.123.123";
 const PHONE_TEL = "0720123123";
-const ADDRESS = "Strada Maria Rosetti 26A, București 020487";
+const ADDRESS = "26A Maria Rosetti Street, Bucharest 020487";
 
 export function TopBar() {
   return (

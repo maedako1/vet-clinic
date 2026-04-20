@@ -18,7 +18,7 @@ export function StickyCallBar() {
           href={`tel:${PHONE_TEL}`}
           className="inline-flex h-11 items-center justify-center rounded-full bg-[color:var(--brand-600)] px-5 text-sm font-semibold text-white shadow-sm hover:bg-[color:var(--brand-700)]"
         >
-          Sună acum
+          Call now
         </a>
       </div>
     </div>

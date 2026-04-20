@@ -3,7 +3,7 @@ import * as React from "react";
 type IconProps = React.SVGProps<SVGSVGElement> & { title?: string };
 
 export function IconPhone(props: IconProps) {
-  const { title = "Telefon", ...rest } = props;
+  const { title = "Phone", ...rest } = props;
   return (
     <svg
       viewBox="0 0 24 24"
@@ -25,7 +25,7 @@ export function IconPhone(props: IconProps) {
 }
 
 export function IconMapPin(props: IconProps) {
-  const { title = "Adresă", ...rest } = props;
+  const { title = "Address", ...rest } = props;
   return (
     <svg
       viewBox="0 0 24 24"
